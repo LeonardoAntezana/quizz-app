@@ -5,14 +5,9 @@ const ContextQuizz = createContext([])
 export const useQuizzContext = () => useContext(ContextQuizz)
 
 function QuizzContextProvider({children}) {
-    const [answers, setAnswers] = useState([])
-
-    const addAnswer = (answer, fn) => {
-        setAnswers([...answers, answer])
-        fn()
-    }
+  const [userInfo, setUserInfo] = useState({name: null, score: 0, time: ''})  
   return (
-    <ContextQuizz.Provider value={{addAnswer}}>
+    <ContextQuizz.Provider value={{userInfo, setUserInfo}}>
         {children}
     </ContextQuizz.Provider>
   )
