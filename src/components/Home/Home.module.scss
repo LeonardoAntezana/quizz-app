@@ -1,0 +1,10 @@
+.container__buttons{
+    display: flex;
+    gap: 2rem;
+    a{
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        width: 8rem;
+    }
+}

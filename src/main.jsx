@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import QuizzContextProvider from './context/QuizzContextProvider'
 import App from './App'
-import './index.css'
 import './firebase/config'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

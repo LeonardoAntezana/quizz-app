@@ -2,8 +2,10 @@ import { React, useState, useEffect } from 'react'
 import { useQuizzContext } from '../../context/QuizzContextProvider'
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
+import View from '../View/View'
 import Question from '../Question/Question'
 import { Link } from 'react-router-dom'
+import styles from '../Question/Question.module.scss'
 
 function QuestionContainer() {
     const {userInfo, setUserInfo} = useQuizzContext()
@@ -31,10 +33,10 @@ function QuestionContainer() {
       <div>
           {questions.length !== 0 && countQuestion !== 5 &&<Question pregn={questions[countQuestion]} sumCount={handleClick}/>}
           {countQuestion === 5 && 
-            <div>
-              <p>El score final es: {userInfo.score}</p>
+            <View className={styles.score}>
+              <p>El score final es: <span>{userInfo.score}</span></p>
               <Link to='/scorelist'>Ir a puntuacion</Link>
-            </div>}
+            </View>}
       </div>)
       }
 

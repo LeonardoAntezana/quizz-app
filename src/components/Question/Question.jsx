@@ -1,5 +1,7 @@
 import React from 'react'
 import { useQuizzContext } from '../../context/QuizzContextProvider'
+import View from '../View/View'
+import styles from './Question.module.scss'
 
 function Question({pregn, sumCount}) {
     const {setUserInfo} = useQuizzContext()
@@ -11,12 +13,12 @@ function Question({pregn, sumCount}) {
       sumCount()
     }
   return (
-    <div>
-        <h3>{question}</h3>
-        <div>
+    <View className={styles.question}>
+        <h1>{question}</h1>
+        <div className={styles.container__options}>
             {options.map((option, index) => <button key={index} onClick={() => handleclick(option)}>{option}</button>)}
         </div>
-    </div>
+    </View>
   )
 }
 

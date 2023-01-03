@@ -1,0 +1,21 @@
+.scoreList{
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .userScore{
+        display: flex;
+        justify-content: start;
+        column-gap: 5.5rem;
+        row-gap: 2rem;
+        flex-wrap: wrap;
+        border-bottom: 2px solid black;
+        background-color: rgb(34, 73, 73);
+        color: #fff;
+        padding: 1rem;
+    }
+}

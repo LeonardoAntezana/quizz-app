@@ -3,12 +3,12 @@ import QuestionContainer from './components/QuestionsContainer/QuestionContainer
 import Info from './components/Info/Info'
 import Home from './components/Home/Home'
 import ScoreList from './components/ScoreList/ScoreList'
-import './App.css'
+import styles from './App.module.scss'
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className={styles.App}>
         <Routes>
           <Route exact path='/' element={<Info/>}/>
           <Route exact path='/home' element={<Home/>}/>

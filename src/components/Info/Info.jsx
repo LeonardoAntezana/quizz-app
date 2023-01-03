@@ -1,6 +1,8 @@
 import React from 'react'
 import { useQuizzContext } from '../../context/QuizzContextProvider'
+import View from '../View/View';
 import { Link } from 'react-router-dom';
+import styles from './Info.module.scss'
 
 function Info() {
     const {userInfo, setUserInfo} = useQuizzContext();
@@ -10,11 +12,11 @@ function Info() {
   }
 
   return (
-    <div>
-        <h3>Bienvenido, Sr. {userInfo.name}!</h3>
-        <input type="text" onChange={handleChange}/>
-        {userInfo.name && <Link to='/home'>Siguiente</Link>}
-    </div>
+    <View className={styles.info}>
+        <h2>Bienvenido, Sr. {userInfo.name}</h2>
+        <input className={styles.input} type="text" onChange={handleChange} placeholder='Ingresar nombre' maxLength={15}/>
+        {userInfo.name && <Link className={`link ${styles.link}`} to='/home'>Siguiente</Link>}
+    </View>
   )
 }
 
