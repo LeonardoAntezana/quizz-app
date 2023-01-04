@@ -1,21 +1,29 @@
 .scoreList{
+    height: 100vh;
     width: 90%;
     max-width: 1140px;
     margin: auto;
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap: 3rem;
+    h1{color: #fff;}
     .userScore{
         display: flex;
-        justify-content: start;
-        column-gap: 5.5rem;
-        row-gap: 2rem;
+        column-gap: 3rem;
+        row-gap: 1rem;
         flex-wrap: wrap;
         border-bottom: 2px solid black;
         background-color: rgb(34, 73, 73);
         color: #fff;
         padding: 1rem;
+        .name{
+            width: 13rem;
+        }
+    }
+    .inicio{
+        color: #fff;
+        background-color: black;
     }
 }

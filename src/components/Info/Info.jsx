@@ -14,7 +14,7 @@ function Info() {
   return (
     <View className={styles.info}>
         <h2>Bienvenido, Sr. {userInfo.name}</h2>
-        <input className={styles.input} type="text" onChange={handleChange} placeholder='Ingresar nombre' maxLength={15}/>
+        <input className={styles.input} type="text" onChange={handleChange} placeholder='Ingresar nombre' maxLength={15} autoFocus/>
         {userInfo.name && <Link className={`link ${styles.link}`} to='/home'>Siguiente</Link>}
     </View>
   )

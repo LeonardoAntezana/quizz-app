@@ -11,19 +11,19 @@ function ScoreList() {
   useEffect(() => {
     setUserInfo({name: null, score: 0, time: ''})
     const data = getFirestore()
-    getDocs(collection(data, 'scores')).then(res => setListScores(res.docs.map(score => ({...score.data()}))))
+    getDocs(collection(data, 'scores')).then(res => setListScores(res.docs.map(score => ({...score.data()})).sort((a, b) => b.score - a.score)))
   },[])
   return (
     <div className={styles.scoreList}>
         <h1>ScoreList</h1>
         {listScores.length !== 0 && listScores.map((score, index) => (
             <div key={index} className={styles.userScore}>
-            <p>Nombre: {score.name}</p>
+            <p className={styles.name}>Nombre: {score.name}</p>
             <p>Score: {score.score}</p>
             <p>Tiempo: {score.time}</p>
         </div>
         ))}
-        <Link to='/'>Inicio</Link>
+        <Link className={styles.inicio} to='/'>Inicio</Link>
     </div>
   )
 }

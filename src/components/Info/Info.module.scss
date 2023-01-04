@@ -13,10 +13,8 @@
         }
     }
     .link{
-        background-color: rgb(124, 99, 124);
+        background-color: black;
+        color: #fff;
         transition: all 0.4s ease-in-out;
-        &:hover{
-            color: #fff;
-        }
     }
 }
