@@ -2,6 +2,7 @@ import React from 'react'
 import { useQuizzContext } from '../../context/QuizzContextProvider'
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
 import View from '../View/View'
+import Score from '../Score/Score'
 import { TailSpin } from 'react-loader-spinner'
 import styles from './ScoreList.module.scss'
 import { Link } from 'react-router-dom'
@@ -20,11 +21,7 @@ function ScoreList() {
     <div className={styles.scoreList}>
         <h1>ScoreList</h1>
         {listScores.map((score, index) => (
-            <div key={index} className={styles.userScore}>
-            <p className={styles.name}>Nombre: {score.name}</p>
-            <p>Score: {score.score}</p>
-            <p>Tiempo: {score.time}</p>
-        </div>
+          <Score key={index} scoreItem={score}/>
         ))}
         <Link className={styles.inicio} to='/'>Inicio</Link>
     </div>

@@ -25,12 +25,8 @@ function QuestionContainer() {
 
     useEffect(() => {
       if(countQuestion === 5){
-        setUserInfo(state => ({
-          ...state,
-          time: (new Date().getTime() - state.time) / 1000,
-        }))
         const data = getFirestore();
-        addDoc(collection(data, 'scores'), userInfo)
+        addDoc(collection(data, 'scores'), {...userInfo, endTime: new Date().getTime()})
       }     
     }, [countQuestion])
     
