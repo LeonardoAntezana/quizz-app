@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function Home() {
   const {setUserInfo} = useQuizzContext() 
   const handleClick = () => {
-    setUserInfo(state => ({...state, time: new Date().getSeconds()}))}
+    setUserInfo(state => ({...state, time: new Date().getTime()}))}
   return (
     <View className={styles.home}>
        <h1>Elige una categoria</h1>

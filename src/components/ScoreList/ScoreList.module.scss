@@ -1,5 +1,5 @@
 .scoreList{
-    height: 100vh;
+    min-height: 100vh;
     width: 90%;
     max-width: 1140px;
     margin: auto;
@@ -8,7 +8,9 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    h1{color: #fff;}
+    h1{
+        margin-top: 3rem;
+        color: #fff;}
     .userScore{
         display: flex;
         column-gap: 3rem;
@@ -25,5 +27,6 @@
     .inicio{
         color: #fff;
         background-color: black;
+        margin-bottom: 3rem;
     }
 }

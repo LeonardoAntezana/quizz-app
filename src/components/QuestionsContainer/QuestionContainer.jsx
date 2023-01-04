@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react'
 import { useQuizzContext } from '../../context/QuizzContextProvider'
 import { getFirestore, collection, getDocs, getDoc, doc, addDoc} from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
+import { TailSpin } from 'react-loader-spinner'
 import View from '../View/View'
 import Question from '../Question/Question'
 import { Link } from 'react-router-dom'
@@ -26,7 +27,7 @@ function QuestionContainer() {
       if(countQuestion === 5){
         setUserInfo(state => ({
           ...state,
-          time: new Date().getSeconds() - state.time,
+          time: (new Date().getTime() - state.time) / 1000,
         }))
         const data = getFirestore();
         addDoc(collection(data, 'scores'), userInfo)
@@ -35,7 +36,7 @@ function QuestionContainer() {
     
     return (
       <div style={{backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${background.fondo})`}} className={styles.questionsContainer}>
-          {questions.length !== 0 && countQuestion !== 5 &&<Question pregn={questions[countQuestion]} sumCount={handleClick}/>}
+          {questions.length === 0 ? <View><TailSpin/></View> : countQuestion !== 5 &&<Question pregn={questions[countQuestion]} sumCount={handleClick}/>}
           {countQuestion === 5 && 
             <View className={styles.score}>
               <p>El score final es: <span>{userInfo.score}</span></p>
