@@ -9,7 +9,7 @@ function Home() {
   const handleClick = () => {
     setUserInfo(state => ({...state, time: new Date().getSeconds()}))}
   return (
-    <View>
+    <View className={styles.home}>
        <h1>Elige una categoria</h1>
         <div className={styles.container__buttons}>
             <Link to='/category/videogames' onClick={handleClick}>Videojuegos</Link>

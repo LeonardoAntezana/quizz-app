@@ -1,0 +1,20 @@
+.questionsContainer{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    .score{
+        p{
+            font-size: 1.5rem;
+            span{
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+        a{
+            background-color: black;
+            color: #fff;
+        }
+    }
+}
+

@@ -2,6 +2,7 @@
     width: 90%;
     max-width: 1140px;
     margin: auto;
+    color: #fff;
     h1{
         text-align: center;
     }
@@ -11,27 +12,14 @@
         grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
         gap: 4rem;
         button{
-            background-color: rgb(92, 148, 148, 0.6);
+            color: #fff;
+            background-color: rgb(92, 148, 148);
             border-radius: 4px;
             font-size: 1.2rem;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.2s ease-in-out;
             &:hover{
-                background-color: rgb(92, 148, 148, 1);
+                transform: scale(1.1);
             }
         }
-    }
-}
-
-.score{
-    p{
-        font-size: 1.5rem;
-        span{
-            font-size: 2rem;
-            font-weight: bold;
-        }
-    }
-    a{
-        background-color: black;
-        color: #fff;
     }
 }

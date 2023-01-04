@@ -1,10 +1,16 @@
-.container__buttons{
-    display: flex;
-    gap: 2rem;
-    a{
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        width: 8rem;
+.home{
+    .container__buttons{
+        display: flex;
+        gap: 2rem;
+        a{
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            width: 8rem;
+            transition: color 0.2s ease-in;
+            &:hover{
+                color: rgb(158, 149, 149);
+            }
+        }
     }
 }
