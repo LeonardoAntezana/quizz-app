@@ -12,6 +12,7 @@
         margin-top: 3rem;
         color: #fff;}
     .userScore{
+        width: clamp(300px, 50%, 600%);
         display: flex;
         column-gap: 3rem;
         row-gap: 1rem;
