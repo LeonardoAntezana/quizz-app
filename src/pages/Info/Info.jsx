@@ -1,6 +1,6 @@
 import React from 'react'
-import { useQuizzContext } from '../../context/QuizzContextProvider'
-import View from '../View/View';
+import { useQuizzContext } from '../../context/QuizzContextProvider';
+import View from '../../components/View/View';
 import { Link } from 'react-router-dom';
 import styles from './Info.module.scss'
 

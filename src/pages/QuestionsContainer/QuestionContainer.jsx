@@ -3,13 +3,13 @@ import { useQuizzContext } from '../../context/QuizzContextProvider'
 import { getFirestore, collection, getDocs, getDoc, doc, addDoc} from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
 import { TailSpin } from 'react-loader-spinner'
-import View from '../View/View'
-import Question from '../Question/Question'
+import View from '../../components/View/View'
+import Question from '../../components/Question/Question'
 import { Link } from 'react-router-dom'
 import styles from './QuestionsContainer.module.scss'
 
 function QuestionContainer() {
-    const {userInfo, setUserInfo} = useQuizzContext()
+    const {userInfo} = useQuizzContext()
     const {categorySelected} = useParams()
     const [questions, setQuestions] = useState([])
     const [countQuestion, setCountQuestion] = useState(0)

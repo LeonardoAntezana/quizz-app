@@ -17,7 +17,14 @@
             border-radius: 4px;
             font-size: 1.2rem;
             transition: all 0.2s ease-in-out;
-            &:hover{
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .question{
+        .container__options{
+            button:hover{
                 transform: scale(1.1);
             }
         }

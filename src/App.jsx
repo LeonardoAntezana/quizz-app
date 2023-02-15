@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import QuestionContainer from './components/QuestionsContainer/QuestionContainer'
-import Info from './components/Info/Info'
-import Home from './components/Home/Home'
-import ScoreList from './components/ScoreList/ScoreList'
+import QuestionContainer from './pages/QuestionsContainer/QuestionContainer'
+import Info from './pages/Info/Info'
+import Home from './pages/Home/Home'
+import ScoreList from './pages/ScoreList/ScoreList'
 import styles from './App.module.scss'
 
 function App() {

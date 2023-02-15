@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuizzContext } from '../../context/QuizzContextProvider'
-import View from '../View/View'
+import View  from '../../components/View/View'
 import styles from './Home.module.scss'
 import { Link } from 'react-router-dom'
 
