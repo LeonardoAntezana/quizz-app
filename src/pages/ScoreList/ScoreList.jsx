@@ -18,12 +18,14 @@ function ScoreList() {
   },[])
   if(listScores.length !== 0){
   return (
-    <div className={styles.scoreList}>
+    <div className={styles.container__scoreList}>
+      <div className={styles.scoreList}>
         <h1>ScoreList</h1>
         {listScores.map((score, index) => (
           <Score key={index} scoreItem={score}/>
         ))}
         <Link className={styles.inicio} to='/'>Inicio</Link>
+    </div>
     </div>
   )}
   return (
